@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+repositories {
+    mavenLocal()
+    maven {
+        url 'http://maven.jzy3d.org/releases'
+    }
+    maven {
+        url 'http://maven.jzy3d.org/snapshots'
+    }
+    jcenter()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.3'
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile 'org.jzy3d:jzy3d-api:1.0.0-SNAPSHOT'
+}
